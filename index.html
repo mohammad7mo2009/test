@@ -1,122 +1,147 @@
 <!doctype html>
 <html>
 <head>
-  <title>test page</title>
+  <title>Test Page</title>
   <meta name="author" content="misho" /> 
-  <meta name="description" content="that page containa some infos"/>
+  <meta name="description" content="that page contains some infos"/>
   <style>
-    /* CSS to control the image size */
-    img {
-      width: 300px; 
-      height: auto; 
-      animation: zoomIn 5s infinite alternate;
+    /* Reset basic elements */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    /* Animation for images */
-    @keyframes zoomIn {
-      0% {
-        transform: scale(1);
-      }
-      100% {
-        transform: scale(1.1);
-      }
-    }
-
-    /* Animation for h1 heading */
-    h1 {
-      animation: slideDown 2s ease-out;
-      text-align: center;
-      font-family: Arial, sans-serif;
-      color: #4CAF50;
-    }
-
-    @keyframes slideDown {
-      0% {
-        transform: translateY(-50px);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    /* Styling and slight animation for paragraphs */
-    p, u {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      animation: fadeIn 3s ease;
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    /* Add some spacing and font style */
     body {
-      margin: 20px;
-      background-color: #f9f9f9;
+      background: url('background.jpg') no-repeat center center/cover;
+      backdrop-filter: blur(10px);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      gap: 20px;
+      animation: fadeInBody 2s ease;
+    }
+
+    @keyframes fadeInBody {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 15px;
+      padding: 20px;
+      width: 90%;
+      max-width: 800px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(8px);
+      animation: slideIn 1.5s ease;
+    }
+
+    @keyframes slideIn {
+      0% {transform: translateY(50px); opacity: 0;}
+      100% {transform: translateY(0); opacity: 1;}
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px #000000;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      animation: zoomIn 5s infinite alternate;
+      margin: 20px 0;
+    }
+
+    @keyframes zoomIn {
+      0% { transform: scale(1);}
+      100% { transform: scale(1.05);}
+    }
+
+    p, u, b {
+      font-size: 1.1rem;
+      color: #f0f0f0;
+      line-height: 1.8;
+      margin-bottom: 15px;
+      display: block;
+      animation: fadeText 2s ease;
+    }
+
+    @keyframes fadeText {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, #fff, #ccc, #fff);
+      margin: 20px 0;
     }
 
     a {
-      color: #2196F3;
-      text-decoration: none;
+      color: #00ffff;
       font-weight: bold;
-      transition: color 0.3s;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
     }
 
     a:hover {
-      color: #0b7dda;
+      color: #ff00ff;
     }
 
     i {
       display: block;
-      margin-top: 20px;
+      margin-top: 30px;
       text-align: center;
-      color: #555;
+      color: #ccc;
       font-style: italic;
+      font-size: 1rem;
     }
-
   </style>
 </head>
 <body>
-<!-- headings -->
-<h1>The Coding Technology</h1>
 
-<!--display images-->
-<img src="project0.jpg" alt="this is picture" />
-<br />
+<div class="container">
+  <h1>The Coding Technology</h1>
 
-<!--paragraphe-->
-<p>
-<br />
-Technology is the study and application of technical aspects of materials, science, and nature to design mechanical, electrical, biological, and information systems to increase efficiency and make life easier. The history of technology dates back to the Neolithic Age or earlier.
-</p>
+  <img src="project0.jpg" alt="this is picture" />
 
-<hr />
+  <p>
+    Technology is the study and application of technical aspects of materials, science, and nature to design mechanical, electrical, biological, and information systems to increase efficiency and make life easier. The history of technology dates back to the Neolithic Age or earlier.
+  </p>
 
-<!-- text properties -->
-<b>Coding creates a set of instructions for computers to follow. These instructions determine what actions a computer can and cannot take. Coding allows programmers to build programs, such as websites and apps.</b> 
-<br />
+  <hr />
 
-<!--display images-->
-<img src="project2.jpg" alt="this is picture" />
-<br />
+  <b>
+    Coding creates a set of instructions for computers to follow. These instructions determine what actions a computer can and cannot take. Coding allows programmers to build programs, such as websites and apps.
+  </b> 
 
-<u> How difficult is coding؟
-Like any new skill, coding requires patience, consistent practice, and the right mindset. The initial challenges, like unfamiliar syntax and debugging errors, can feel overwhelming, but with determination and access to quality resources, they become manageable stepping stones. </u> 
-<br /><br />
+  <img src="project2.jpg" alt="this is picture" />
 
-<!--display images-->
-<img src="project.jpg" alt="this is picture" />
-<br />
+  <u>
+    How difficult is coding؟
+    Like any new skill, coding requires patience, consistent practice, and the right mindset. The initial challenges, like unfamiliar syntax and debugging errors, can feel overwhelming, but with determination and access to quality resources, they become manageable stepping stones.
+  </u>
 
-<!--links-->
-<a href="http://www.google.com" target="_blank">Click here to go to Google</a>
+  <img src="project.jpg" alt="this is picture" />
 
-<br />
+  <a href="http://www.google.com" target="_blank">Click here to go to Google</a>
 
-<i>made by user_7mo the professional programmer</i>
+  <i>made by user_7mo the professional programmer</i>
+</div>
 
 </body>
 </html>
